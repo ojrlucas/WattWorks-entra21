@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
     		        session.setAttribute("entidadeId", ent.getId());
     		        session.setAttribute("entidadeNome", ent.getNome());
     		        session.setAttribute("entidadeCnpj", ent.getCnpj());
+    		        session.setAttribute("usuarioId", usuario.getId());
     		    } else {
     		        session.setAttribute("mensagemErroLogin", "Usuário não possui entidade associada.");
     		        response.sendRedirect("/WattWorks/login.jsp");

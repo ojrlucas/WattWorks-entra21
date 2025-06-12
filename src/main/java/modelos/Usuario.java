@@ -18,6 +18,11 @@ public class Usuario {
         this.senhaHash = senha;
     }
     
+    public Usuario(int id, String email) {
+        this.id = id;
+    	this.email = email;
+    }
+    
     public int getId() {
 		return id;
 	}

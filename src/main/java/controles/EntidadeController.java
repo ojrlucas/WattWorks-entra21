@@ -16,6 +16,11 @@ public class EntidadeController {
 		EntidadeDao.salvarEntidadeEUsuario(entDTO);
 	}
 	 
+	public void editarEntidadeEUsuario(Entidade ent, Usuario user) throws SQLException {
+		entDTO = new EntidadeDTO(ent, user);
+		EntidadeDao.salvarEntidadeEUsuario(entDTO);
+	}
+	
 	public Entidade getById(int id) throws SQLException {
 		return EntidadeDao.getById(id);
 	}

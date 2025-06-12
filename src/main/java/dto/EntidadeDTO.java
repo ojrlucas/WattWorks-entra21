@@ -9,6 +9,7 @@ import modelos.Usuario;
 public class EntidadeDTO {
 	private String nome, cnpj, email, fone, senhaHash;
 	private LocalDate dataCadastro;	
+	private int entidadeId, usuarioId;
 
 	public EntidadeDTO(Entidade ent, Usuario user) {
 		this.nome = ent.getNome();
@@ -17,6 +18,8 @@ public class EntidadeDTO {
 		this.fone = ent.getFone();
 		this.senhaHash = user.getSenhaHash();
 		this.dataCadastro = ent.getDataCadastro();
+		this.entidadeId = ent.getId();
+		this.usuarioId = user.getId();
 	}
 
 	public String getNome() {
@@ -42,5 +45,13 @@ public class EntidadeDTO {
 	public String getDataCadastro() {
 	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	    return dataCadastro.format(formatter);
+	}
+
+	public int getEntidadeId() {
+		return entidadeId;
+	}
+	
+	public int getUsuarioId() {
+		return usuarioId;
 	}
 }

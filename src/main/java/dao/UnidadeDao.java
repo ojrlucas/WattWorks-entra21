@@ -33,6 +33,24 @@ private static Connection con;
 		}
 	}
 	
+	public static void editarUnidade(Unidade uni) throws SQLException {
+        try {
+        	con = ConexaoDB.getConexao();
+        	PreparedStatement stm = con.prepareStatement("UPDATE tb_unidades SET descricao = ?, cnpj = ?, subgrupo_id = ?, modalidade_id = ?, entidade_id = ? WHERE id = ?");
+            stm.setString(1, uni.getDescricao());
+            stm.setString(2, uni.getCnpj());
+            stm.setInt(3, uni.getSubgrupoId());
+            stm.setInt(4, uni.getModalidadeId());
+            stm.setInt(5, uni.getEntidade_id());
+            stm.setInt(6, uni.getId());
+            stm.execute();
+            stm.close();
+		}
+		catch (SQLException e) {
+			throw new SQLException(e.getMessage());
+		}
+	}
+	
 	public static Unidade getById(int id) throws SQLException {
 		Unidade unidade = null;
 		try {

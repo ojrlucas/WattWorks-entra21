@@ -33,6 +33,25 @@ public class EntidadeDao {
 		}
 	}
 	
+	public static void editarEntidadeEUsuario(EntidadeDTO dto) throws SQLException {
+        try {
+        	con = ConexaoDB.getConexao();
+            PreparedStatement stm = con.prepareStatement("CALL sp_editar_entidade_usuario (?,?,?,?,?)");
+         
+            stm.setString(1, dto.getNome());
+            stm.setString(2, dto.getEmail());
+            stm.setString(3, dto.getFone());
+            stm.setString(4, dto.getCnpj());
+            stm.setInt(5, dto.getEntidadeId());
+            stm.setInt(5, dto.getUsuarioId());
+            stm.execute();
+            stm.close();
+		}
+		catch (SQLException e) {
+			throw new SQLException(e.getMessage());
+		}
+	}
+	
 	public static Entidade getById(int id) throws SQLException {
 		Entidade entidade = null;
 		try {

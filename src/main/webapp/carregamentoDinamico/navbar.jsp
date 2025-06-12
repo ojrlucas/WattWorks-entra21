@@ -19,7 +19,7 @@
       </div>
 </nav>
 
-<div class="user-menu" id="userMenu">
+<div class="user-menu position-fixed" id="userMenu">
     <% 
         String entidadeNome = (String) session.getAttribute("entidadeNome");
         String entidadeCnpj = (String) session.getAttribute("entidadeCnpj");

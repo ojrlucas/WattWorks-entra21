@@ -16,23 +16,23 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light background */
+            background-color: #f8f9fa; 
         }
         
         .card {
-            border-radius: 1rem; /* More rounded corners */
-            border: none; /* Remove default border */
-            overflow: hidden; /* Ensure content respects border-radius */
+            border-radius: 1rem; 
+            border: none; 
+            overflow: hidden; 
         }
         .card.shadow-lg {
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
         }
         .chart-container {
             position: relative;
-            height: 300px; /* Fixed height for better chart appearance */
+            height: 300px; 
             width: 100%;
         }
-        /* Custom styles for decorative cards */
+        
         .decorative-card {
             min-height: 150px;
             display: flex;
@@ -80,7 +80,7 @@
     </section>
     <main class="container py-5" style="margin-top: 0px;">
     
-        <!-- Section for Decorative Cards -->
+
         <div class="row g-4 mb-5">
             <div class="col-md-4">
                 <div class="card decorative-card bg-primary text-white shadow-lg">
@@ -96,16 +96,19 @@
                     <p class="card-text">Acesse todos os seus registros anteriores.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card decorative-card bg-warning text-white shadow-lg">
-                    <i class="bi bi-bell"></i>
-                    <h5 class="card-title fw-bold">Alertas Personalizados</h5>
-                    <p class="card-text">Receba notificações sobre sua fatura.</p>
-                </div>
-            </div>
+     
+			<div class="col-md-4">
+			  <a href="cadastrarFatura.jsp" style="text-decoration: none;">
+			    <div class="card decorative-card bg-warning text-white shadow-lg text-center p-3">
+			      <i class="bi bi-file-earmark-plus fs-1 mb-2"></i>
+			      <h5 class="card-title fw-bold">Cadastrar Fatura</h5>
+			    </div>
+			  </a>
+			</div>
+
         </div>
 
-        <!-- Chart Section -->
+
         <div class="card shadow-lg p-4">
             <h5 class="mb-4 text-secondary text-center fw-bold fs-4">Simulação de Consumo Mensal (kWh)</h5>
             <div class="chart-container">

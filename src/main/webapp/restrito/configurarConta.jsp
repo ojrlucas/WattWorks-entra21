@@ -37,7 +37,7 @@
 	            <p><strong>Fone: </strong> <%= entDTO.getFone() %></p>
 	           	<p><strong>Email: </strong> <%= entDTO.getEmail() %></p>
 	           	<p><strong>Data de Cadastro: </strong> <%= entDTO.getDataCadastro() %></p>
-	           	<a class="btn btn-primary" href="/WattWorks/restrito/editarUnidade.jsp?id=<%= entidadeId %>">editar</a>
+	           	<a class="btn btn-primary" href="/WattWorks/restrito/editarEmpresa.jsp">editar</a>
 	        </div>
 	    </div>
 	
